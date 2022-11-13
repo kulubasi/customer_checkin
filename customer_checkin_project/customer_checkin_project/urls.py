@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',landingview,name='landing'),
     path('login',loginview,name='login'),
+    path('alarm',alarmsound,name='alarm'),
 ]

@@ -3,7 +3,14 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login,logout
 from .forms import *
 from .models import *
-
+import winsound 
+def alarmsound(request):
+    # Set frequency to 2000 Hertz
+    frequency = 2000
+    duration = 3000
+    winsound.Beep(frequency, duration)
+    return render(request,'landing.html')
+    
 # Create your views here.
 def landingview(request):
 	return render(request,'landing.html')
